@@ -1,7 +1,7 @@
-#include <GL/glut.h>                            // Include the GLUT library and all its library components
+#include <GL/glut.h>                      // Include the GLUT library and all its library components
 #include <iostream>
-#include <fstream>                              //required for the project
-#include "game.h"
+#include <fstream>                       //required for the project
+#include "game.h"                        //including the game.h file 
 
 #define ROWS 40.0                        //defining the rows and columns
 #define COLUMNS 40.0
