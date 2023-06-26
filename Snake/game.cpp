@@ -1,10 +1,10 @@
 #include <GL/glut.h>
 #include <iostream>
 #include <ctime>
-#include "game.h"
+#include "game.h"                       //include the header game.h
 
 void unit(int,int);
-int random(int,int);
+int random(int,int);                     //prototype
 
 bool length_inc=false;
 bool seedflag = false;
@@ -26,14 +26,14 @@ void initGrid(int x,int y)
 
 void draw_grid()
 {
-    for(int i =0;i<columns;i++)
+    for(int i =0;i<columns;i++)                                    //initialize the grid
     {
         for(int j=0;j<rows;j++)
             {unit(i,j);}
     }
 }
 
-void draw_snake()
+void draw_snake()                                        //snake rendering
 {
     for(int i =length-1;i>0;i--)
     {
@@ -82,14 +82,14 @@ void draw_snake()
             glVertex2d(posx[i],posy[i]); glVertex2d(posx[i]+1,posy[i]); glVertex2d(posx[i]+1,posy[i]+1); glVertex2d(posx[i],posy[i]+1);
         glEnd();
     }
-    if(length_inc)
+    if(length_inc)                                         //lenght of the snake increases
     {
         length++;
         length_inc=false;
     }
 }
 
-void draw_food()
+void draw_food()                                           //food is randomly generated
 {
     if(!food)
     {
